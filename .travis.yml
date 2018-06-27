@@ -12,7 +12,7 @@ cache:
 
 os:
   #  # The macOS build in travis is really slow.
-  #  - osx
+  - osx
   - linux
 
 # Note that in order to run the tests on Linux,
