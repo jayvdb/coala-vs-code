@@ -1,19 +1,12 @@
 sudo: false
-language: python
-python:
-  - 3.4
-  - 3.5
-  - 3.6
 
 cache:
   pip: true
   directories:
     - node_modules
 
-os:
-  #  # The macOS build in travis is really slow.
-  - osx
-  - linux
+jobs:
+  include:
 
 # Note that in order to run the tests on Linux,
 # you need to have a before_install configuration
@@ -38,6 +31,8 @@ before_install:
 
 jobs:
   include:
+    - os: osx
+      language: bash
     - python: 3.6
       stage: moban
       before_install: false
