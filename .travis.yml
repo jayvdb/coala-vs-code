@@ -33,6 +33,10 @@ jobs:
   include:
     - os: osx
       language: bash
+      install:
+        - brew install python3
+        - export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+        - pip install -r requirements.txt
     - python: 3.6
       stage: moban
       before_install: false
