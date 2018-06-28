@@ -35,6 +35,7 @@ before_install:
   - printf '%s\n'
            "$(cat test-requirements.txt requirements.txt)"
            > requirements.txt
+  - echo 'behave' >> requirements.txt
 
 jobs:
   include:
